@@ -1,5 +1,6 @@
 import fs from 'fs';
 import path from 'path';
+import Image from 'next/image';
 import Link from 'next/link';
 import matter from 'gray-matter';
 import marked from 'marked';
@@ -19,11 +20,11 @@ export default function PostPage({
           <h1 className="text-5xl mb-7">{title}</h1>
           <CategoryLabel>{category}</CategoryLabel>
         </div>
-        <img src={cover_image} alt="" className="w-full rounded" />
+        <Image src={cover_image} alt="" className="w-full rounded" />
 
         <div className="flex justify-between items-center bg-gray-100 p-2 my-8">
           <div className="flex items-center">
-            <img
+            <Image
               src={author_image}
               alt=""
               className="mx-4 w-10 h-10 object-cover rounded-full hidden sm:block "
@@ -48,8 +49,6 @@ export async function getStaticPaths() {
       slug: filename.replace('.md', '')
     }
   }));
-
-  console.log(paths);
 
   return {
     paths,
