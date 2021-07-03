@@ -6,7 +6,6 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
     "cache-posts": "node scripts/cache.js",
     "prepare": "husky install"
   },
@@ -20,8 +19,6 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.2.6",
-    "eslint": "7.29.0",
-    "eslint-config-next": "11.0.1",
     "husky": "^7.0.0",
     "postcss": "^8.3.5",
     "tailwindcss": "^2.2.4"
